@@ -1,0 +1,26 @@
+.home-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #3D315B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-logo {
+  margin-bottom: 5rem;
+}
+
+.home-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-nav button {
+  width: 70%;
+  margin: 0.5rem 0;
+}
+

@@ -1,0 +1,72 @@
+<div class="new-word-wrapper">
+  <div class="new-word-create">
+    <mat-tab-group [(selectedIndex)]="selectedIndex">
+      <form>
+        <mat-tab label="Słówko">
+          <h1>Nowe słówko</h1>
+          <div class="new-word-form">
+            <mat-form-field appearance="fill">
+              <mat-label>Wpisz angielskie słówko</mat-label>
+              <input [(ngModel)]="word.name"
+                     name="name"
+                     matInput>
+            </mat-form-field>
+            <div class="new-word-button-wrapper">
+              <button (click)="selectedIndex = 1"
+                      mat-raised-button
+                      color="primary"
+                      aria-label="Next step"
+                      type="button">
+                <mat-icon>navigate_next</mat-icon>
+              </button>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Tłumaczenie">
+          <h1>Dodaj tłumaczenie</h1>
+          <div class="new-word-form">
+            <mat-form-field appearance="fill">
+              <mat-label>Wpisz tłumaczenie</mat-label>
+              <input [(ngModel)]="word.translation"
+                     name="translation"
+                     matInput>
+            </mat-form-field>
+            <div class="new-word-button-wrapper">
+              <button (click)="saveWord()"
+                      mat-raised-button
+                      color="primary"
+                      aria-label="Add translation"
+                      type="button">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab [disabled]="true"
+                 label="Podsumowanie">
+          <h1>Podsumowanie</h1>
+          <p>Gratulacje! Właśnie dodałeś nowe słówko!</p>
+          <button routerLink="/home"
+                  mat-raised-button
+                  color="primary"
+                  aria-label="Next step"
+                  type="button">
+            Przejdź do menu głównego
+          </button>
+        </mat-tab>
+      </form>
+    </mat-tab-group>
+
+
+  </div>
+  <div class="new-word-last-wrapper">
+    <h1>Ostatio dodane</h1>
+    <div class="new-word-last-list">
+      <span *ngFor="let word of words">
+        {{word.name}}
+      </span>
+    </div>
+  </div>
+</div>
+
+

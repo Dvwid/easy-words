@@ -1,0 +1,53 @@
+h1 {
+  margin-top: 3rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.new-word-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.new-word-create {
+  width: 100%;
+  margin: 0 1rem;
+}
+
+mat-tab-group {
+  width: 100%;
+  display: flex;
+}
+
+.new-word-form {
+  width: 100%;
+  display: flex;
+}
+
+.new-word-form mat-form-field {
+  width: 75%;
+}
+
+.new-word-button-wrapper {
+  height: 3.2rem;
+  width: 15%;
+  margin-left: 0.5rem;
+}
+
+.new-word-button-wrapper button {
+  height: 100%;
+  width: 100%;
+}
+
+.new-word-last-wrapper {
+  margin-left: 1rem;
+}
+
+.new-word-last-list {
+  display: flex;
+  flex-direction: column;
+}
+

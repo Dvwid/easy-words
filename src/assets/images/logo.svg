@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="263" height="233" viewBox="0 0 263 233">
+  <text id="easy" transform="translate(32 104)" fill="#fff" font-size="109" font-family="ScriptMTBold, Script MT"><tspan x="0" y="0">easy</tspan></text>
+  <text id="words" transform="translate(0 206)" fill="#fff" font-size="109" font-family="ScriptMTBold, Script MT"><tspan x="0" y="0">words</tspan></text>
+  <line id="Line_1" data-name="Line 1" x2="157" transform="translate(3 131)" fill="none" stroke="#fff" stroke-width="12"/>
+  <line id="Line_2" data-name="Line 2" y2="82" transform="translate(8.5 54.5)" fill="none" stroke="#fff" stroke-width="11"/>
+</svg>

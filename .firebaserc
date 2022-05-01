@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "easy-words-pl": {
+      "hosting": {
+        "EasyWords": [
+          "easy-words-pl"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "easy-words-pl"
+  }
+}
