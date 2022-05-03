@@ -1,0 +1,45 @@
+<div class="flip-card-wrapper">
+  <div class="flip-card-nav" routerLink="/home">
+    <mat-icon>arrow_back_ios</mat-icon>
+  </div>
+  <div class="flip-card-body">
+    <div [ngClass]="{'flip-card-watched': flip === true}"
+         (click)="flipCard()"
+         #card
+         class="flip-card">
+      <div class="flip-card-inner" *ngIf="randomWord">
+        <div class="flip-card-front">
+          {{randomWord?.name}}
+        </div>
+        <div class="flip-card-back">
+          {{randomWord?.translation}}
+        </div>
+      </div>
+      <div class="flip-card-inner" *ngIf="!randomWord">
+        <div class="flip-card-front">
+          <app-spinner></app-spinner>
+        </div>
+        <div class="flip-card-back">
+          <app-spinner></app-spinner>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card-answer">
+    <form (submit)="checkAnswer()" class="flip-card-form">
+      <mat-form-field >
+        <mat-label>Sprawdź się!</mat-label>
+        <input [(ngModel)]="answer"
+               name="translation"
+               matInput>
+      </mat-form-field>
+      <div class="flip-card-button-wrapper">
+        <button mat-raised-button
+                color="primary">
+          ?
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+

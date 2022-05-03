@@ -1,0 +1,114 @@
+.flip-card-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.flip-card-nav {
+  height: 5vh;
+  margin: 2rem 1rem;
+}
+
+.flip-card-body {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card {
+  color: white;
+  width: 70%;
+  height: 20vh;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flip-card-watched .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background: linear-gradient(-135deg, #3F2B96 0%, #A8C0FF 100%);
+  border-radius: 15px;
+}
+
+.flip-card-back {
+  background: linear-gradient(-150deg, #3F2B96 0%, #A8C0FF 100%);
+  border-radius: 15px;
+  transform: rotateY(180deg);
+}
+
+.flip-card-switch {
+  animation: switch 1s ease-in;
+}
+
+.flip-card-answer {
+}
+
+.flip-card-form {
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem;
+}
+.flip-card-form mat-form-field {
+  font-size: 1.1rem;
+  width: 75%;
+}
+
+.flip-card-button-wrapper {
+  height: 3.2rem;
+  width: 15%;
+  margin-left: 0.5rem;
+}
+
+.flip-card-button-wrapper button {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes switch {
+  0% {
+    transition: 1s;
+    transform: rotate(0deg) translateX(0);
+  }
+  38% {
+    transition: 1s;
+    transform: rotate(20deg) translateX(-150%);
+  }
+  50% {
+    transition: 0s;
+    transform: rotate(20deg) translateX(-150%);
+  }
+  50.1% {
+    transition: 1s;
+    transform: rotate(20deg) translateX(150%);
+  }
+  100% {
+    transition: 1s;
+    transform: rotate(0deg) translateX(0);
+  }
+}
+

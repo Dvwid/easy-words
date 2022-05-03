@@ -8,6 +8,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTabsModule} from "@angular/material/tabs";
 import {FormsModule} from "@angular/forms";
+import {SpinnerModule} from "../shared/spinner/spinner.module";
+import {NoDataInfoModule} from "../shared/no-data-info/no-data-info.module";
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import {FormsModule} from "@angular/forms";
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    SpinnerModule,
+    NoDataInfoModule
   ]
 })
 export class NewWordModule {

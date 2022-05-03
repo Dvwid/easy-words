@@ -10,3 +10,18 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.success-snackbar {
+  color: white;
+  background: limegreen;
+  background: -webkit-linear-gradient(to left, green, limegreen);
+  background: linear-gradient(to left, green, limegreen);
+}
+
+.fail-snackbar {
+  color: white;
+  background: red;
+  background: -webkit-linear-gradient(to left, orange, orangered);
+  background: linear-gradient(to left, orange, orangered);
+
+}
